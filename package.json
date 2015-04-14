@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/damonmcminn/t1log-api/issues"
   },
-  "homepage": "https://github.com/damonmcminn/t1log-api"
+  "homepage": "https://github.com/damonmcminn/t1log-api",
+  "dependencies": {
+    "simple-error-factory": "^0.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.2.1"
+  }
 }
