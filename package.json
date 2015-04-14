@@ -4,7 +4,8 @@
   "description": "t1log-api",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "compile": "babel es6 --out-dir lib --source-maps"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,11 @@
   },
   "homepage": "https://github.com/damonmcminn/t1log-api",
   "dependencies": {
-    "simple-error-factory": "^0.2.0"
+    "simple-error-factory": "^0.2.0",
+    "source-map-support": "^0.2.10"
   },
   "devDependencies": {
+    "babel": "^5.1.8",
     "jasmine": "^2.2.1"
   }
 }
