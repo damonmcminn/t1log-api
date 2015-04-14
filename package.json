@@ -1,0 +1,19 @@
+{
+  "name": "t1log-api",
+  "version": "0.0.1",
+  "description": "t1log-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damonmcminn/t1log-api.git"
+  },
+  "author": "Damon McMinn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/damonmcminn/t1log-api/issues"
+  },
+  "homepage": "https://github.com/damonmcminn/t1log-api"
+}
