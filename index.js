@@ -5,10 +5,15 @@
 
 'use strict';
 
-const config = require('./lib/config');
-const api = require('./lib/api');
+const CONFIG = require('parse-config');
+const log = require('./lib/log');
+const db = require('./lib/db');
 
-api.listen(config.port, function(x) {
-  console.log(x);
-  console.log(`Listening on ${config.port}`);
-});
+
+db.initialise()
+  .then(function(data) {
+    require('./lib/api').initialise();
+  })
+  .catch(function(err) {
+    throw err;
+  });
