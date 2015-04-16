@@ -9,13 +9,37 @@ port = 28015
 tables = ['users', 'logs']
 
 parser = argparse.ArgumentParser(description='t1log RethinkDB admin')
-parser.add_argument('--drop', dest='drop', action='store_true', default=None, help='Drop the database')
+parser.add_argument(
+    '--drop',
+    #dest='drop',
+    action='store_true',
+    default=None,
+    help='Drop the database'
+)
+
+parser.add_argument(
+    '--host',
+    help='RethinkDB host',
+    default='localhost'
+)
+
+parser.add_argument(
+    '--port',
+    help='RethinkDB port',
+    default=28015
+)
+
+parser.add_argument(
+    '--db',
+    help='database name',
+    default='t1log'
+)
 
 args = parser.parse_args()
 
 # argv for host, port, etc
 
-conn = r.connect(host, port, db)
+conn = r.connect(args.host, args.port, args.db)
 
 databases = r.db_list().run(conn)
 
